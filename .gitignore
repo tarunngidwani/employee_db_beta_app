@@ -21,3 +21,6 @@
 /yarn-error.log
 
 .byebug_history
+
+# Custom ignores
+.idea/
