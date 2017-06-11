@@ -11,6 +11,16 @@ class StateTest < ActiveSupport::TestCase
     assert_not_nil_empty state, :name
   end
 
+  test 'state name abbreviation cannot be nil' do
+    state = states :state_name_abbr_nil_val
+    assert_not_nil_empty state, :name_abbr
+  end
+
+  test 'state name abbreviation cannot be empty' do
+    state = states :state_name_abbr_empty_val
+    assert_not_nil_empty state, :name_abbr
+  end
+
   private
 
   # Helper method:

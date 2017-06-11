@@ -7,3 +7,11 @@ state_name_nil_val:
 state_name_empty_val:
   name: ''
   name_abbr: MyString
+
+state_name_abbr_nil_val:
+  name: MyString
+  name_abbr:
+
+state_name_abbr_empty_val:
+  name: MyString
+  name_abbr: ''

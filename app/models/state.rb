@@ -1,3 +1,3 @@
 class State < ApplicationRecord
-  validates :name, presence: true
+  validates :name, :name_abbr, presence: true
 end
