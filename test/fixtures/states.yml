@@ -2,24 +2,32 @@
 
 state_name_nil_val:
   name:
-  name_abbr: MyString
+  name_abbr: IL
 
 state_name_empty_val:
   name: ''
-  name_abbr: MyString
+  name_abbr: OH
 
 state_name_invalid:
   name: illinois1234
-  name_abbr: MyString
+  name_abbr: MO
 
 state_name_valid:
   name: Illinois
-  name_abbr: MyString
+  name_abbr: IL
 
 state_name_abbr_nil_val:
-  name: MyString
+  name: Michigan
   name_abbr:
 
 state_name_abbr_empty_val:
-  name: MyString
+  name: Wisconsin
   name_abbr: ''
+
+state_name_abbr_invalid:
+  name: Ohio
+  name_abbr: OHio
+
+state_name_abbr_valid:
+  name: Ohio
+  name_abbr: OH

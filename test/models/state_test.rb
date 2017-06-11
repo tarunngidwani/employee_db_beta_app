@@ -37,6 +37,21 @@ class StateTest < ActiveSupport::TestCase
     assert_not_nil_empty state, :name_abbr
   end
 
+  test 'state name abbreviation is invalid' do
+    state = states :state_name_abbr_invalid
+    assert state.invalid?
+    assert state.errors[:name_abbr].any?
+    assert_equal state.errors[:name_abbr],
+                 ['must be made up of two uppercase letters, between a to z']
+  end
+
+  test 'state name abbreviation is valid' do
+    state = states :state_name_abbr_valid
+    assert state.valid?
+    assert_not state.errors[:name_abbr].any?
+    assert_equal state.errors[:name_abbr], []
+  end
+
   private
 
   # Helper method:
