@@ -19,7 +19,6 @@ states = [
   { name: 'Colorado',             name_abbr: 'CO' },
   { name: 'Connecticut',          name_abbr: 'CT' },
   { name: 'Delaware',             name_abbr: 'DE' },
-  { name: 'District of Columbia', name_abbr: 'DC' },
   { name: 'Florida',              name_abbr: 'FL' },
   { name: 'Georgia',              name_abbr: 'GA' },
   { name: 'Hawaii',               name_abbr: 'HI' },
