@@ -8,6 +8,14 @@ state_name_empty_val:
   name: ''
   name_abbr: MyString
 
+state_name_invalid:
+  name: illinois1234
+  name_abbr: MyString
+
+state_name_valid:
+  name: Illinois
+  name_abbr: MyString
+
 state_name_abbr_nil_val:
   name: MyString
   name_abbr:
