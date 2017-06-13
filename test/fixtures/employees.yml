@@ -117,5 +117,21 @@ employee_city_valid:
   house_num: 12
   street_name: W. Iron Rd.
   city: New York city
-  state: state_name_valid_0
+  state: state_name_invalid_0
   zip_code: 60001
+
+employee_state_nil_val:
+  name: Tony Stark
+  house_num: 12
+  street_name: W. Iron Rd.
+  city: New York city
+  state:
+  zip_code: 60001
+
+employee_state_empty_val:
+  name: Karl Stolley
+  house_num: 879
+  street_name: Bleek Blvd
+  city: Mt. prospect
+  state: ''
+  zip_code: 60645

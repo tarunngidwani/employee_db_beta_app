@@ -94,4 +94,16 @@ class EmployeeTest < ActiveSupport::TestCase
     assert_not employee.errors[:city].any?
     assert_equal employee.errors[:city], []
   end
+
+  test 'state_id cannot be nil' do
+    employee = employees :employee_state_nil_val
+    assert_not_nil_empty employee, :state_id
+  end
+
+  test 'state_id cannot be empty' do
+    employee = employees :employee_state_empty_val
+    employee.state_id = nil if employee.state_id.zero?
+
+    assert_not_nil_empty employee, :state_id
+  end
 end
