@@ -15,3 +15,19 @@ employee_name_empty_val:
   city: Harlem
   state: state_name_valid_0
   zip_code: 60616
+
+employee_name_not_begins_with_uppercase_letter:
+  name: karl stolley
+  house_num: 342
+  street_name: Link Blvd
+  city: Blemont
+  state: state_name_valid_0
+  zip_code: 60614
+
+employee_name_valid:
+  name: Bruce Wayne
+  house_num: 111
+  street_name: Wayne Manor
+  city: Gotham
+  state: state_name_valid_1
+  zip_code: 60001
