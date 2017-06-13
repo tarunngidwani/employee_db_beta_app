@@ -106,4 +106,18 @@ class EmployeeTest < ActiveSupport::TestCase
 
     assert_not_nil_empty employee, :state_id
   end
+
+  test 'state_id does not exist but linked to employee' do
+    employee = employees :employee_state_not_exists
+    assert employee.invalid?
+    assert_not employee.errors[:state_id].any?
+    assert employee.errors[:state_id], []
+  end
+
+  test 'state_id does exist and linked to employee' do
+    employee = employees :employee_state_exists
+    assert employee.valid?
+    assert_not employee.errors[:state_id].any?
+    assert employee.errors[:state_id], []
+  end
 end

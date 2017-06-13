@@ -135,3 +135,19 @@ employee_state_empty_val:
   city: Mt. prospect
   state: ''
   zip_code: 60645
+
+employee_state_not_exists:
+  name: Silver Surfer
+  house_num: 12
+  street_name: East Galaxy Rd.
+  city: Moon City
+  state: non_existent_state_fixture_data
+  zip_code: 10000
+
+employee_state_exists:
+  name: Aquaman
+  house_num: 999
+  street_name: Atlantis Drive
+  city: Atlantis
+  state: state_name_abbr_valid
+  zip_code: 69690
