@@ -59,4 +59,14 @@ class EmployeeTest < ActiveSupport::TestCase
     assert_not employee.errors[:house_num].any?
     assert_equal employee.errors[:house_num], []
   end
+
+  test 'street name cannot be nil' do
+    employee = employees :employee_street_name_nil_val
+    assert_not_nil_empty employee, :street_name
+  end
+
+  test 'street name cannot be empty' do
+    employee = employees :employee_street_name_empty_val
+    assert_not_nil_empty employee, :street_name
+  end
 end
