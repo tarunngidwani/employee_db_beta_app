@@ -36,4 +36,27 @@ class EmployeeTest < ActiveSupport::TestCase
     employee = employees :employee_house_num_empty_val
     assert_not_nil_empty employee, :house_num
   end
+
+  test 'employee house number cannot be a negative value' do
+    employee = employees :employee_house_num_negative_val
+    assert employee.invalid?
+    assert employee.errors[:house_num].any?
+    assert employee.errors[:house_num],
+           ['must be a positive numeric value']
+  end
+
+  test 'employee house number cannot be a string' do
+    employee = employees :employee_house_num_string_val
+    assert employee.invalid?
+    assert employee.errors[:house_num].any?
+    assert employee.errors[:house_num],
+           ['must be a positive numeric value']
+  end
+
+  test 'employee house number is a positive numeric value' do
+    employee = employees :employee_house_num_valid
+    assert employee.valid?
+    assert_not employee.errors[:house_num].any?
+    assert_equal employee.errors[:house_num], []
+  end
 end

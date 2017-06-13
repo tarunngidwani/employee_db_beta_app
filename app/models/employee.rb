@@ -6,4 +6,8 @@ class Employee < ApplicationRecord
     with: /\A[A-Z]/,
     message: 'must begin with an uppercase letter [A-Z]'
   }
+  validates :house_num, allow_blank: true, format: {
+    with: /\A[0-9]+\z/,
+    message: 'must be a positive numeric value'
+  }
 end

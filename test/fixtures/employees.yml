@@ -47,3 +47,27 @@ employee_house_num_empty_val:
   city: Harlem
   state: state_name_valid_0
   zip_code: 60616
+
+employee_house_num_negative_val:
+  name: Test Fail
+  house_num: -122
+  street_name: Park Blvd
+  city: Harlem
+  state: state_name_valid_0
+  zip_code: 60616
+
+employee_house_num_string_val:
+  name: Test Fail
+  house_num: T122est
+  street_name: Park Blvd
+  city: Harlem
+  state: state_name_valid_0
+  zip_code: 60616
+
+employee_house_num_valid:
+  name: Test Fail
+  house_num: 122
+  street_name: Park Blvd
+  city: Harlem
+  state: state_name_valid_0
+  zip_code: 60616
