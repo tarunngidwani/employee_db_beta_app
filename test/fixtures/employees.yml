@@ -31,3 +31,19 @@ employee_name_valid:
   city: Gotham
   state: state_name_valid_1
   zip_code: 60001
+
+employee_house_num_nil_val:
+  name: Test Name
+  house_num:
+  street_name: Book Rd
+  city: Naperville
+  state: state_name_valid_0
+  zip_code: 60564
+
+employee_house_num_empty_val:
+  name: Fail Test
+  house_num: ''
+  street_name: Park Blvd
+  city: Harlem
+  state: state_name_valid_0
+  zip_code: 60616
