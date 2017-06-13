@@ -1,17 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  house_num: 1
-  street_name: MyString
-  city: MyString
-  state: one
-  zip_code: MyString
+employee_name_nil_val:
+  name:
+  house_num: 123
+  street_name: Book Rd
+  city: Naperville
+  state: state_name_valid_0
+  zip_code: 60564
 
-two:
-  name: MyString
-  house_num: 1
-  street_name: MyString
-  city: MyString
-  state: two
-  zip_code: MyString
+employee_name_empty_val:
+  name: ''
+  house_num: 432
+  street_name: Park Blvd
+  city: Harlem
+  state: state_name_valid_0
+  zip_code: 60616
