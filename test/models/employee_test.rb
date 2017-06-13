@@ -69,4 +69,14 @@ class EmployeeTest < ActiveSupport::TestCase
     employee = employees :employee_street_name_empty_val
     assert_not_nil_empty employee, :street_name
   end
+
+  test 'city cannot be nil' do
+    employee = employees :employee_city_nil_val
+    assert_not_nil_empty employee, :city
+  end
+
+  test 'city cannot be empty' do
+    employee = employees :employee_city_empty_val
+    assert_not_nil_empty employee, :city
+  end
 end
