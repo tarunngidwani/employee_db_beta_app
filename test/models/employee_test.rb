@@ -79,4 +79,19 @@ class EmployeeTest < ActiveSupport::TestCase
     employee = employees :employee_city_empty_val
     assert_not_nil_empty employee, :city
   end
+
+  test 'city does not being with an uppercase letter' do
+    employee = employees :employee_city_not_begins_with_uppercase_letter
+    assert employee.invalid?
+    assert employee.errors[:city].any?
+    assert_equal employee.errors[:city],
+                 ['must begin with an uppercase letter [A-Z]']
+  end
+
+  test 'city does being with an uppercase letter' do
+    employee = employees :employee_city_valid
+    assert employee.valid?
+    assert_not employee.errors[:city].any?
+    assert_equal employee.errors[:city], []
+  end
 end

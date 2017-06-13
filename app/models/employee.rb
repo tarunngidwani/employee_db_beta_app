@@ -2,7 +2,7 @@ class Employee < ApplicationRecord
   belongs_to :state
 
   validates :name, :house_num, :street_name, :city, presence: true
-  validates :name, allow_blank: true, format: {
+  validates :name, :city, allow_blank: true, format: {
     with: /\A[A-Z]/,
     message: 'must begin with an uppercase letter [A-Z]'
   }
