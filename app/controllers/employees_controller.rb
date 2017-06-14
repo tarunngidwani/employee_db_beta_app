@@ -14,4 +14,10 @@ class EmployeesController < ApplicationController
   def update; end
 
   def destroy; end
+
+  private
+
+  def set_employee
+    @employee = Employee.find params[:id]
+  end
 end
