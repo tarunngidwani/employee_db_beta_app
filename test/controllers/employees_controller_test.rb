@@ -3,6 +3,22 @@ require 'test_helper'
 class EmployeesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @employee = employees :employee_name_valid
+    @new_valid_employee = {
+      name: 'Clark Kent',
+      house_num: '777',
+      street_name: 'Barn Door Rd.',
+      city: 'Smallville',
+      state_id: (states :state_name_valid_1).id,
+      zip_code: '12442'
+    }
+    @new_invalid_employee = {
+      name: 'clark kent',
+      house_num: '777',
+      street_name: 'Barn Door Rd.',
+      city: 'Smallville',
+      state_id: (states :state_name_valid_1).id,
+      zip_code: '12442'
+    }
   end
 
   test 'should get index' do
@@ -93,5 +109,21 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
     # back action link
     assert_select 'a', 1
     assert_select 'a', 'Back'
+  end
+
+  test 'should not create new employee record' do
+    assert_no_difference('Employee.count') do
+      post employees_url, params: { employee: @new_invalid_employee }
+    end
+
+    assert_template :new
+  end
+
+  test 'should create new employee record' do
+    assert_difference('Employee.count') do
+      post employees_url, params: { employee: @new_valid_employee }
+    end
+
+    assert_redirected_to employee_url(Employee.last)
   end
 end

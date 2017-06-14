@@ -13,7 +13,18 @@ class EmployeesController < ApplicationController
 
   def edit; end
 
-  def create; end
+  def create
+    @employee = Employee.new employee_params
+
+    respond_to do |format|
+      if @employee.save
+        message = 'Employee record was successfully created.'
+        format.html { redirect_to @employee, notice: message }
+      else
+        format.html { render :new }
+      end
+    end
+  end
 
   def update; end
 
