@@ -66,3 +66,20 @@ states = [
 State.delete_all
 
 State.create! states
+
+employees = [
+  {
+    name: 'Queen Bee',        house_num: '123',
+    street_name: 'Fair Ave.', city: 'Fairview',
+    state_id: 1,              zip_code: '45678'
+  },
+  {
+    name: 'Bruce Banner',       house_num: '345',
+    street_name: 'Miller St.',  city: 'Taho',
+    state: (State.find 30), zip_code: '10002'
+  }
+]
+
+Employee.delete_all
+
+Employee.create! employees
