@@ -1,0 +1,35 @@
+= form_for @employee do |employee_form|
+  - if @employee.errors.any?
+    %h2= "#{pluralize(@employee.errors.count, 'error')} prohibited this employee record"
+    = ' from being saved:'
+    %ul
+      - @employee.errors.full_messages.each do |message|
+        %li= message
+
+  .field
+    = employee_form.label      :name
+    = employee_form.text_field :name
+  %br
+  .field
+    = employee_form.label      :house_num
+    = employee_form.text_field :house_num
+  %br
+  .field
+    = employee_form.label      :street_name
+    = employee_form.text_field :street_name
+  %br
+  .field
+    = employee_form.label      :city
+    = employee_form.text_field :city
+  %br
+  .field
+    = employee_form.label :state
+    = employee_form.select :state, (State.all.pluck :name, :id)
+  %br
+  .field
+    = employee_form.label      :zip_code
+    = employee_form.text_field :zip_code
+  %br
+  .actions
+    = employee_form.submit
+  %br
