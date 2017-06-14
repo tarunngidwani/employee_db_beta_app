@@ -11,4 +11,8 @@ class Employee < ApplicationRecord
     with: /\A[0-9]+\z/,
     message: 'must be a positive numeric value'
   }
+  validates :zip_code, allow_blank: true, format: {
+    with: /\A[0-9]{5}\z/,
+    message: 'must be exactly five digits long'
+  }
 end

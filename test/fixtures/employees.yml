@@ -167,3 +167,43 @@ employee_zip_code_empty_val:
   city: Froth
   state: state_name_valid_2
   zip_code: ''
+
+employee_zip_code_invalid_0:
+  name: Test Fail
+  house_num: 124
+  street_name: Kilburne Lane
+  city: Froth
+  state: state_name_valid_2
+  zip_code: 1871
+
+employee_zip_code_invalid_1:
+  name: Test Fail
+  house_num: 124
+  street_name: Kilburne Lane
+  city: Froth
+  state: state_name_valid_2
+  zip_code: 187189
+
+employee_zip_code_invalid_2:
+  name: Test Fail
+  house_num: 124
+  street_name: Kilburne Lane
+  city: Froth
+  state: state_name_valid_2
+  zip_code: 19871code
+
+employee_zip_code_invalid_3:
+  name: Test Fail
+  house_num: 124
+  street_name: Kilburne Lane
+  city: Froth
+  state: state_name_valid_2
+  zip_code: ninteen eighty one
+
+employee_zip_code_valid:
+  name: Test Fail
+  house_num: 124
+  street_name: Kilburne Lane
+  city: Froth
+  state: state_name_valid_0
+  zip_code: 18719

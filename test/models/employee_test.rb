@@ -130,4 +130,27 @@ class EmployeeTest < ActiveSupport::TestCase
     employee = employees :employee_zip_code_empty_val
     assert_not_nil_empty employee, :zip_code
   end
+
+  test 'multiple invalid zip codes' do
+    invalid_employees = [
+      employees(:employee_zip_code_invalid_0),
+      employees(:employee_zip_code_invalid_1),
+      employees(:employee_zip_code_invalid_2),
+      employees(:employee_zip_code_invalid_3)
+    ]
+    invalid_employees.each do |employee|
+      assert employee.invalid?
+      assert employee.errors[:zip_code].any?
+      assert_equal employee.errors[:zip_code],
+                   ['must be exactly five digits long']
+
+    end
+  end
+
+  test 'valid zip code' do
+    employee = employees :employee_zip_code_valid
+    assert employee.valid?
+    assert_not employee.errors[:zip_code].any?
+    assert_equal employee.errors[:zip_code], []
+  end
 end
