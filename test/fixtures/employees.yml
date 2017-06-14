@@ -1,29 +1,5 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-employee_name_nil_val:
-  name:
-  house_num: 123
-  street_name: Book Rd
-  city: Naperville
-  state: state_name_valid_0
-  zip_code: 60564
-
-employee_name_empty_val:
-  name: ''
-  house_num: 432
-  street_name: Park Blvd
-  city: Harlem
-  state: state_name_valid_0
-  zip_code: 60616
-
-employee_name_not_begins_with_uppercase_letter:
-  name: karl stolley
-  house_num: 342
-  street_name: Link Blvd
-  city: Blemont
-  state: state_name_valid_0
-  zip_code: 60614
-
 employee_name_valid:
   name: Bruce Wayne
   house_num: 111
@@ -31,38 +7,6 @@ employee_name_valid:
   city: Gotham
   state: state_name_valid_1
   zip_code: 60001
-
-employee_house_num_nil_val:
-  name: Test Name
-  house_num:
-  street_name: Book Rd
-  city: Naperville
-  state: state_name_valid_0
-  zip_code: 60564
-
-employee_house_num_empty_val:
-  name: Fail Test
-  house_num: ''
-  street_name: Park Blvd
-  city: Harlem
-  state: state_name_valid_0
-  zip_code: 60616
-
-employee_house_num_negative_val:
-  name: Test Fail
-  house_num: -122
-  street_name: Park Blvd
-  city: Harlem
-  state: state_name_valid_0
-  zip_code: 60616
-
-employee_house_num_string_val:
-  name: Test Fail
-  house_num: T122est
-  street_name: Park Blvd
-  city: Harlem
-  state: state_name_valid_0
-  zip_code: 60616
 
 employee_house_num_valid:
   name: Test Fail
@@ -72,46 +16,6 @@ employee_house_num_valid:
   state: state_name_valid_0
   zip_code: 60616
 
-employee_street_name_nil_val:
-  name: Test Fail
-  house_num: 122
-  street_name:
-  city: Harlem
-  state: state_name_valid_0
-  zip_code: 60616
-
-employee_street_name_empty_val:
-  name: Test Fail
-  house_num: 122
-  street_name: ''
-  city: Harlem
-  state: state_name_valid_0
-  zip_code: 60616
-
-employee_city_nil_val:
-  name: Test Fail
-  house_num: 122
-  street_name: Filestream Land
-  city:
-  state: state_name_valid_0
-  zip_code: 60616
-
-employee_city_empty_val:
-  name: Test Fail
-  house_num: 122
-  street_name: File Handle
-  city: ''
-  state: state_name_valid_0
-  zip_code: 60616
-
-employee_city_not_begins_with_uppercase_letter:
-  name: Karl Stolley
-  house_num: 879
-  street_name: Bleek Blvd
-  city: mt. prospect
-  state: state_name_valid_1
-  zip_code: 60645
-
 employee_city_valid:
   name: Tony Stark
   house_num: 12
@@ -120,30 +24,6 @@ employee_city_valid:
   state: state_name_invalid_0
   zip_code: 60001
 
-employee_state_nil_val:
-  name: Tony Stark
-  house_num: 12
-  street_name: W. Iron Rd.
-  city: New York city
-  state:
-  zip_code: 60001
-
-employee_state_empty_val:
-  name: Karl Stolley
-  house_num: 879
-  street_name: Bleek Blvd
-  city: Mt. prospect
-  state: ''
-  zip_code: 60645
-
-employee_state_not_exists:
-  name: Silver Surfer
-  house_num: 12
-  street_name: East Galaxy Rd.
-  city: Moon City
-  state: non_existent_state_fixture_data
-  zip_code: 10000
-
 employee_state_exists:
   name: Aquaman
   house_num: 999
@@ -151,54 +31,6 @@ employee_state_exists:
   city: Atlantis
   state: state_name_abbr_valid
   zip_code: 69690
-
-employee_zip_code_nil_val:
-  name: Test Fail
-  house_num: 124
-  street_name: Kilburne Lane
-  city: Froth
-  state: state_name_valid_2
-  zip_code:
-
-employee_zip_code_empty_val:
-  name: Test Fail
-  house_num: 124
-  street_name: Kilburne Lane
-  city: Froth
-  state: state_name_valid_2
-  zip_code: ''
-
-employee_zip_code_invalid_0:
-  name: Test Fail
-  house_num: 124
-  street_name: Kilburne Lane
-  city: Froth
-  state: state_name_valid_2
-  zip_code: 1871
-
-employee_zip_code_invalid_1:
-  name: Test Fail
-  house_num: 124
-  street_name: Kilburne Lane
-  city: Froth
-  state: state_name_valid_2
-  zip_code: 187189
-
-employee_zip_code_invalid_2:
-  name: Test Fail
-  house_num: 124
-  street_name: Kilburne Lane
-  city: Froth
-  state: state_name_valid_2
-  zip_code: 19871code
-
-employee_zip_code_invalid_3:
-  name: Test Fail
-  house_num: 124
-  street_name: Kilburne Lane
-  city: Froth
-  state: state_name_valid_2
-  zip_code: ninteen eighty one
 
 employee_zip_code_valid:
   name: Test Fail
