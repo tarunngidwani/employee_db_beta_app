@@ -1,2 +1,19 @@
-%h1 Employees#show
-%p Find me in app/views/employees/show.html.haml
+%p= notice
+
+%h2 Employee Record
+
+%p
+  %b Name:
+  = @employee.name
+
+%p
+  %b Address:
+  = @employee.house_num
+  = "#{@employee.street_name},"
+  = "#{@employee.city},"
+  = @employee.state.name_abbr
+  = @employee.zip_code
+
+= link_to 'Edit', (edit_employee_path @employee)
+\|
+= link_to 'Back', employees_path

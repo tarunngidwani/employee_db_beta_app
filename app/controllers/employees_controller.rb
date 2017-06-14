@@ -1,4 +1,6 @@
 class EmployeesController < ApplicationController
+  before_action :set_employee, only: [:show]
+
   def index
     @employees = Employee.all
   end
