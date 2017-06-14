@@ -23,8 +23,8 @@
     = employee_form.text_field :city
   %br
   .field
-    = employee_form.label :state
-    = employee_form.select :state, (State.all.pluck :name, :id)
+    = employee_form.label  :state_id
+    = employee_form.select :state_id, (State.all.pluck :name, :id)
   %br
   .field
     = employee_form.label      :zip_code
