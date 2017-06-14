@@ -52,4 +52,46 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
     assert_select 'a', 'Edit'
     assert_select 'a', 'Back'
   end
+
+  test 'should get new' do
+    get new_employee_url
+    assert_response :success
+    assert_select 'h2', 'New Employee Record'
+
+    # Checks for total number of fields
+    # on page
+    assert_select '.field', 6
+
+    # Checks to ensure that the labels
+    # of each field are rendered onto the
+    # page correctly
+    assert_select '.field label', 6
+    assert_select '.field label', 'Name'
+    assert_select '.field label', 'House num'
+    assert_select '.field label', 'Street name'
+    assert_select '.field label', 'City'
+    assert_select '.field label', 'State'
+    assert_select '.field label', 'Zip code'
+
+    # Checks to ensure that the inputs
+    # of each field are rendered onto the
+    # page correctly
+    assert_select '.field input', 5
+    assert_select '.field select', 1
+
+    # Checks to ensure that the dropdown
+    # is getting populated from the data
+    # in our states fixture file
+    assert_select '.field select option', 13
+
+    # Checks to ensure we see the
+    # Create Employee submit button
+    assert_select '.actions', 1
+    assert_select '.actions input', 1
+
+    # Checks to ensure we see the
+    # back action link
+    assert_select 'a', 1
+    assert_select 'a', 'Back'
+  end
 end
