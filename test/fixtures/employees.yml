@@ -151,3 +151,19 @@ employee_state_exists:
   city: Atlantis
   state: state_name_abbr_valid
   zip_code: 69690
+
+employee_zip_code_nil_val:
+  name: Test Fail
+  house_num: 124
+  street_name: Kilburne Lane
+  city: Froth
+  state: state_name_valid_2
+  zip_code:
+
+employee_zip_code_empty_val:
+  name: Test Fail
+  house_num: 124
+  street_name: Kilburne Lane
+  city: Froth
+  state: state_name_valid_2
+  zip_code: ''

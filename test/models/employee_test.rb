@@ -120,4 +120,14 @@ class EmployeeTest < ActiveSupport::TestCase
     assert_not employee.errors[:state_id].any?
     assert employee.errors[:state_id], []
   end
+
+  test 'zip code cannot be nil' do
+    employee = employees :employee_zip_code_nil_val
+    assert_not_nil_empty employee, :zip_code
+  end
+
+  test 'zip code cannot be empty' do
+    employee = employees :employee_zip_code_empty_val
+    assert_not_nil_empty employee, :zip_code
+  end
 end
