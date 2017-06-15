@@ -1,5 +1,5 @@
 class EmployeesController < ApplicationController
-  before_action :set_employee, only: %i[show edit destroy]
+  before_action :set_employee, only: %i[show edit update destroy]
 
   def index
     @employees = Employee.all
@@ -26,7 +26,16 @@ class EmployeesController < ApplicationController
     end
   end
 
-  def update; end
+  def update
+    respond_to do |format|
+      if @employee.update(employee_params)
+        message = 'Employee record was successfully updated.'
+        format.html { redirect_to @employee, notice: message }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
 
   def destroy
     @employee.destroy

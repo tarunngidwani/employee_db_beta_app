@@ -19,6 +19,16 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
       state_id: (states :state_name_valid_1).id,
       zip_code: '12442'
     }
+    @invalid_update = {
+      name: 'Super Man',
+      city: 'SmallVille',
+      zip_code: '1244'
+    }
+    @valid_update = {
+      name: 'Super Man',
+      city: 'SmallVille',
+      zip_code: '19910'
+    }
   end
 
   test 'should get index' do
@@ -176,5 +186,15 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
     assert_select 'a', 2
     assert_select 'a', 'Show'
     assert_select 'a', 'Back'
+  end
+
+  test 'should not update specified employee record' do
+    patch employee_url(@employee), params: { employee: @invalid_update }
+    assert_template :edit
+  end
+
+  test 'should update specified employee record' do
+    patch employee_url(@employee), params: { employee: @valid_update }
+    assert_redirected_to employee_url(@employee)
   end
 end
