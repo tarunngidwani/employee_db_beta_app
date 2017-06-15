@@ -126,4 +126,12 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to employee_url(Employee.last)
   end
+
+  test 'should destroy specified employee record' do
+    assert_difference('Employee.count', -1) do
+      delete employee_url(@employee)
+    end
+
+    assert_redirected_to employees_url
+  end
 end
