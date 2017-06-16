@@ -44,5 +44,13 @@ application up and running.
         - Creates the required databases, tables, and populates it with the specified seed data
 
 * How to run the test suite
+    - `rails test:models`
+        - Runs all the unit tests for the models of the application
+
+    - `rails test:controllers`
+        - Runs all the functional tests for the controllers of the application
+
+    - `rails test`
+        - Runs the complete suite of tests for the application
 
 * Starting the application
