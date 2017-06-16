@@ -54,3 +54,8 @@ application up and running.
         - Runs the complete suite of tests for the application
 
 * Starting the application
+    - `rails server`
+        - Starts the application in the development environment, running on:
+        http://127.0.0.1:3000
+
+        - Enter this URL in your browser to begin using the application
