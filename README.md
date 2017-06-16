@@ -38,6 +38,10 @@ application up and running.
                                       4. bundle install
 
 * Database creation & initialization
+    1. `rails db:drop`
+        - Destroys any existing databases within this application
+    2. `rails db:setup`
+        - Creates the required databases, tables, and populates it with the specified seed data
 
 * How to run the test suite
 
