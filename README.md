@@ -59,3 +59,10 @@ application up and running.
         http://127.0.0.1:3000
 
         - Enter this URL in your browser to begin using the application
+
+### Author
+For any questions, comments and/or feedback please feel free to contact the author
+
+Name: Tarun Gidwani
+
+Email: tgidwani@hawk.iit.edu
