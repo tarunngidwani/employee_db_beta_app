@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'session/create'
+  get 'auth/developer', :as => 'developer_auth'
+  match 'auth/:provider/callback' => 'session#create', :via => [:get, :post]
 
   get 'session/destroy'
 
