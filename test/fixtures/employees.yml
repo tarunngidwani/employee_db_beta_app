@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+employee_name_valid:
+  name: Bruce Wayne
+  house_num: 111
+  street_name: Wayne Manor
+  city: Gotham
+  state: state_name_valid_1
+  zip_code: 60001
+
+employee_house_num_valid:
+  name: Test Fail
+  house_num: 122
+  street_name: Park Blvd
+  city: Harlem
+  state: state_name_valid_0
+  zip_code: 60616
+
+employee_city_valid:
+  name: Tony Stark
+  house_num: 12
+  street_name: W. Iron Rd.
+  city: New York city
+  state: state_name_invalid_0
+  zip_code: 60001
+
+employee_state_exists:
+  name: Aquaman
+  house_num: 999
+  street_name: Atlantis Drive
+  city: Atlantis
+  state: state_name_abbr_valid
+  zip_code: 69690
+
+employee_zip_code_valid:
+  name: Test Fail
+  house_num: 124
+  street_name: Kilburne Lane
+  city: Froth
+  state: state_name_valid_0
+  zip_code: 18719

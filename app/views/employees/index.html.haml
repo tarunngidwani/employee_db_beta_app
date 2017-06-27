@@ -1,0 +1,27 @@
+%p= notice
+
+%h1 Employee Records
+
+%table{width: '25%'}
+  - @employees.each do |employee|
+    %tr
+      %td= employee.name
+
+      %td
+        %dl
+          %dt= employee.house_num
+          %dt= employee.street_name
+          %dt= employee.city
+          %dt= employee.state.name
+          %dt= employee.zip_code
+
+      %td
+        = link_to 'Show', employee
+        %br
+        = link_to 'Edit', (edit_employee_path employee)
+        %br
+        = link_to 'Destroy', employee, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'Create Employee Record', new_employee_path

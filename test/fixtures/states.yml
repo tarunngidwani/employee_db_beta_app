@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+state_name_nil_val:
+  name:
+  name_abbr: IL
+
+state_name_empty_val:
+  name: ''
+  name_abbr: OH
+
+state_name_invalid_0:
+  name: arizona
+  name_abbr: AZ
+
+state_name_invalid_1:
+  name: Illinois1234
+  name_abbr: IL
+
+state_name_invalid_2:
+  name: New york
+  name_abbr: NY
+
+state_name_invalid_3:
+  name: West Virginia2354
+  name_abbr: WV
+
+state_name_invalid_4:
+  name: New Hampshire State1
+  name_abbr: NH
+
+state_name_valid_0:
+  name: Illinois
+  name_abbr: IL
+
+state_name_valid_1:
+  name: North Dakota
+  name_abbr: ND
+
+state_name_abbr_nil_val:
+  name: Michigan
+  name_abbr:
+
+state_name_abbr_empty_val:
+  name: Wisconsin
+  name_abbr: ''
+
+state_name_abbr_invalid:
+  name: Ohio
+  name_abbr: OHio
+
+state_name_abbr_valid:
+  name: Ohio
+  name_abbr: OH
