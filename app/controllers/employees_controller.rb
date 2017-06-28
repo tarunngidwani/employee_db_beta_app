@@ -1,5 +1,7 @@
 class EmployeesController < ApplicationController
   before_action :set_employee, only: %i[show edit update destroy]
+  include Login
+  before_action :user_logged_in
 
   def index
     @employees = Employee.all
