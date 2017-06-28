@@ -2,6 +2,14 @@ class LoginController < ApplicationController
 
   def login; end
 
+  def authenticate
+    session['current_user'] = create_current_user_info_hash
+
+    respond_to do |format|
+      format.html { redirect_to employees_url }
+    end
+  end
+
   private
 
   def create_current_user_info_hash
