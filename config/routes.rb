@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root 'login#login', as: 'login'
 
   get '/auth/github', as: 'github_login'
+  get '/auth/:provider/callback', to: 'login#authenticate'
 
   resources :employees
 end
