@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem "omniauth"
-gem "omniauth-github"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use sqlite3 as the database for Active Record
@@ -53,6 +53,7 @@ end
 
 # Custom Gem Additions
 gem 'haml-rails', '~> 1.0.0'
+gem 'omniauth-github', '~> 1.3.0'
 gem 'rails-controller-testing', '~> 1.0.2'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
