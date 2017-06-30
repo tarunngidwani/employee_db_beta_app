@@ -1,9 +1,6 @@
 %p= notice
 
 %h1 Employee Records
-= link_to 'Create Employee Record', new_employee_path
-
-
 
 %table{width: '25%'}
   - @employees.each do |employee|
@@ -27,4 +24,4 @@
 
 %br
 
-= link_to 'Logout', :logout
+= link_to 'Create Employee Record', new_employee_path

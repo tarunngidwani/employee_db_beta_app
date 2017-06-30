@@ -10,6 +10,8 @@ class SessionsController < ApplicationController
     end
   end
 
+  def destroy; end
+
   private
 
     def create_current_user_info_hash
