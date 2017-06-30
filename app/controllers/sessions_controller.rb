@@ -1,4 +1,4 @@
-class SessionController < ApplicationController
+class SessionsController < ApplicationController
 
   def login; end
 
@@ -21,4 +21,5 @@ class SessionController < ApplicationController
         uid: user_uid,
         name: user_name
       }
+    end
 end

@@ -1,5 +1,4 @@
 class EmployeesController < ApplicationController
-  before_action :logged_in_user, :only => [:index]
   before_action :set_employee, only: %i[show edit update destroy]
 
   def index
