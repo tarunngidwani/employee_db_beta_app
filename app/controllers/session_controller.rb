@@ -1,4 +1,4 @@
 class SessionController < ApplicationController
 
-  def login: end
+  def login; end
 end
