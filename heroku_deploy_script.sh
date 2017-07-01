@@ -23,12 +23,15 @@ readonly github_oauth_client_id=$2
 readonly github_oauth_secret=$3
 readonly deploy_branch=$4
 
+# Destroy application if it already exists
+heroku destroy --confirm ${application_name}
+
 # Deploys a base application on heroku
 heroku create ${application_name}
 
 # Setup config vars on heroku
 # These config vars are made available as
-# enviornment variables to our Rails application
+# environment variables to our Rails application
 heroku config:set GITHUB_ID=${github_oauth_client_id}
 heroku config:set GITHUB_SECRET=${github_oauth_secret}
 
