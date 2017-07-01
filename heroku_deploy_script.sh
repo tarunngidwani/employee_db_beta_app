@@ -31,3 +31,6 @@ heroku create ${application_name}
 # enviornment variables to our Rails application
 heroku config:set GITHUB_ID=${github_oauth_client_id}
 heroku config:set GITHUB_SECRET=${github_oauth_secret}
+
+# Deploy Rails application on heroku
+git push heroku ${deploy_branch}:master
