@@ -39,3 +39,6 @@ git push heroku ${deploy_branch}:master
 heroku pg:reset DATABASE_URL --confirm ${application_name}
 heroku run rails db:migrate
 heroku run rails db:seed
+
+# Restarts web server serving our Rails application
+heroku restart
