@@ -10,7 +10,11 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    reset_session
+
+    redirect_to :root
+  end
 
   private
 
@@ -19,9 +23,6 @@ class SessionsController < ApplicationController
       user_uid = github_auth_hash['uid']
       user_name = github_auth_hash['info']['name']
 
-      current_user = {
-        uid: user_uid,
-        name: user_name
-      }
+      current_user = user_name
     end
 end
