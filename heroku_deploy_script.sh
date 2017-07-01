@@ -22,3 +22,6 @@ readonly application_name=$1
 readonly github_oauth_client_id=$2
 readonly github_oauth_secret=$3
 readonly deploy_branch=$4
+
+# Deploys a base application on heroku
+heroku create ${application_name}
