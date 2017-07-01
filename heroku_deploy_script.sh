@@ -34,3 +34,8 @@ heroku config:set GITHUB_SECRET=${github_oauth_secret}
 
 # Deploy Rails application on heroku
 git push heroku ${deploy_branch}:master
+
+# Database Setup
+heroku pg:reset DATABASE_URL --confirm ${application_name}
+heroku run rails db:migrate
+heroku run rails db:seed
