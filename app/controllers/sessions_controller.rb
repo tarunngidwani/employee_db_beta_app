@@ -1,9 +1,10 @@
 class SessionsController < ApplicationController
+  include Sessions
 
   def login; end
 
   def create
-    session['current_user'] = create_current_user_info_hash
+    self.current_user = create_current_user_info_hash
 
     respond_to do |format|
       format.html { redirect_to employees_url }

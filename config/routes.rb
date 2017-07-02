@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'sessions#login'
+  root 'sessions#login', as: 'login'
 
   get 'auth/github', as: 'github_auth'
   get 'auth/:provider/callback', to: 'sessions#create'
