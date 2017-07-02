@@ -216,6 +216,8 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update specified employee record' do
+    login(@provider, @user_name)
+
     patch employee_url(@employee), params: { employee: @valid_update }
     assert_redirected_to employee_url(@employee)
   end
