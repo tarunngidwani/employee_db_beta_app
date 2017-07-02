@@ -1,4 +1,6 @@
 class EmployeesController < ApplicationController
+  include Sessions
+  before_action :check_user_logged_in
   before_action :set_employee, only: %i[show edit update destroy]
 
   def index
