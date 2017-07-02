@@ -32,6 +32,12 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
       city: 'SmallVille',
       zip_code: '19910'
     }
+
+    # Login to application
+    # before running each test
+    provider = 'github'
+    user_name = 'Lex Luther'
+    login(provider, user_name)
   end
 
   test 'should get index' do
