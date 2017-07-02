@@ -209,6 +209,8 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should not update specified employee record' do
+    login(@provider, @user_name)
+
     patch employee_url(@employee), params: { employee: @invalid_update }
     assert_template :edit
   end
