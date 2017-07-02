@@ -15,6 +15,10 @@ module Sessions
     session['current_user']
   end
 
+  def current_user=(current_user_hash)
+    session['current_user'] = current_user_hash
+  end
+
   def user_logged_in?
     current_user ? true : false
   end
