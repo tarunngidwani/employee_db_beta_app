@@ -3,6 +3,14 @@ module Sessions
 
   private
 
+  def check_user_logged_in
+    return if user_logged_in?
+
+    respond_to do |format|
+      format.html { redirect_to login_url, notice: 'Please login before proceeding' }
+    end
+  end
+
   def current_user
     session['current_user']
   end
