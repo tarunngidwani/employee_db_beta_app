@@ -28,6 +28,19 @@ class SessionControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to employees_url
   end
 
+  test 'logout successfully by user' do
+    provider = 'github'
+    user_name = 'Lex Luther'
+    login provider, user_name
+
+    delete logout_url
+    assert_redirected_to login_url
+
+    get login_url
+    notice = 'You have been logged out'
+    test_login_page_content notice
+  end
+
   private
 
   def test_login_page_content(notice)
