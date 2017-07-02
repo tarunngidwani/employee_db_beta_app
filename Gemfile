@@ -52,8 +52,11 @@ end
 # Custom Gem Additions
 gem 'haml-rails', '~> 1.0.0'
 gem 'omniauth-github', '~> 1.3.0'
-gem 'pg', '~> 0.21.0'
 gem 'rails-controller-testing', '~> 1.0.2'
+
+group :production do
+  gem 'pg', '~> 0.21.0'
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
