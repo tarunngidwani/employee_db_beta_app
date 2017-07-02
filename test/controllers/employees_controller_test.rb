@@ -154,6 +154,8 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should destroy specified employee record' do
+    login(@provider, @user_name)
+
     assert_difference('Employee.count', -1) do
       delete employee_url(@employee)
     end
