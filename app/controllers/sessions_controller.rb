@@ -11,7 +11,13 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    reset_session
+
+    respond_to do |format|
+      format.html { redirect_to login_url, notice: 'You have been logged out' }
+    end
+  end
 
   private
 
