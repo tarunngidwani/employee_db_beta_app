@@ -38,6 +38,8 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get index' do
+    login(@provider, @user_name)
+
     get employees_url
     assert_response :success
     assert_select 'h1', 'Employee Records'
