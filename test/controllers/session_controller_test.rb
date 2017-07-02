@@ -1,6 +1,8 @@
 require 'test_helper'
+require 'helpers/omniauth_login_test_helper'
 
 class SessionControllerTest < ActionDispatch::IntegrationTest
+  include OmniauthLoginTestHelper
 
   test 'should get login' do
     get login_url
@@ -16,6 +18,14 @@ class SessionControllerTest < ActionDispatch::IntegrationTest
 
     get login_url
     test_login_page_content 'Please login before proceeding'
+  end
+
+  test 'login successful by user' do
+    provider = 'github'
+    user_name = 'Lex Luther'
+    login provider, user_name
+
+    assert_redirected_to employees_url
   end
 
   private
