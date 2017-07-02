@@ -144,6 +144,8 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should create new employee record' do
+    login(@provider, @user_name)
+
     assert_difference('Employee.count') do
       post employees_url, params: { employee: @new_valid_employee }
     end
