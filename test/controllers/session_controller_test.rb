@@ -10,6 +10,14 @@ class SessionControllerTest < ActionDispatch::IntegrationTest
     test_login_page_content notice
   end
 
+  test 'redirect to login page no user logged in' do
+    get employees_url
+    assert_redirected_to login_url
+
+    get login_url
+    test_login_page_content 'Please login before proceeding'
+  end
+
   private
 
   def test_login_page_content(notice)
