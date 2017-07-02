@@ -64,7 +64,7 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
 
     # Checks the total number of links on
     # page and the content of one of them
-    assert_select 'a', 16
+    assert_select 'a', 17
     assert_select 'a', 'Create Employee Record'
   end
 
@@ -83,7 +83,7 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
     # Checks to ensure that the 2 actions
     # available for specified employee record
     # are being displayed
-    assert_select 'a', 2
+    assert_select 'a', 3
     assert_select 'a', 'Edit'
     assert_select 'a', 'Back'
   end
@@ -126,7 +126,7 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
 
     # Checks to ensure we see the
     # back action link
-    assert_select 'a', 1
+    assert_select 'a', 2
     assert_select 'a', 'Back'
   end
 
@@ -192,7 +192,7 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
 
     # Checks to ensure we see the
     # back action link
-    assert_select 'a', 2
+    assert_select 'a', 3
     assert_select 'a', 'Show'
     assert_select 'a', 'Back'
   end
