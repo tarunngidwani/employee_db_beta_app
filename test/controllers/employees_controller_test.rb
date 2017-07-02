@@ -32,6 +32,9 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
       city: 'SmallVille',
       zip_code: '19910'
     }
+
+    @provider = 'github'
+    @user_name = 'Lex Luther'
   end
 
   test 'should get index' do
