@@ -90,6 +90,8 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get new' do
+    login(@provider, @user_name)
+
     get new_employee_url
     assert_response :success
     assert_select 'h2', 'New Employee Record'
