@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  root 'sessions#login'
+  root 'sessions#login', as: 'login'
 
   get 'auth/github', as: 'github_auth'
-  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/:provider/callback', to: 'sessions#create', as: 'omniauth_callback'
 
   delete 'sessions/destroy', as: 'logout'
   # For details on the DSL available within this file,
