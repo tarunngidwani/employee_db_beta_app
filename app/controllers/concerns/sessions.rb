@@ -10,4 +10,8 @@ module Sessions
   def user_logged_in?
     current_user ? true : false
   end
+
+  def current_user_name
+    current_user['name']
+  end
 end
