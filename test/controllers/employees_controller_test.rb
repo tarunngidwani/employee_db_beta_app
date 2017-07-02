@@ -1,6 +1,9 @@
 require 'test_helper'
+require 'helpers/omniauth_login_test_helper'
 
 class EmployeesControllerTest < ActionDispatch::IntegrationTest
+  include OmniauthLoginTestHelper
+
   setup do
     @employee = employees :employee_name_valid
     @new_valid_employee = {
