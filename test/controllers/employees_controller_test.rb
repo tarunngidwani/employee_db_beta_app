@@ -164,6 +164,8 @@ class EmployeesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get edit' do
+    login(@provider, @user_name)
+
     get edit_employee_url(@employee)
     assert_response :success
     assert_select 'h2', 'Editing Employee Record'
