@@ -24,7 +24,7 @@ readonly github_oauth_secret=$3
 readonly deploy_branch=$4
 
 # Destroy application if it already exists
-heroku destroy --confirm ${application_name}
+heroku apps:destroy ${application_name} --confirm ${application_name}
 
 # Deploys a base application on heroku
 heroku create ${application_name}
